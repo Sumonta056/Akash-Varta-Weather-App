@@ -4,7 +4,7 @@ import { Card, CardContent } from "./ui/card";
 
 interface CurrentWeatherProps {
   data: WeatherData;
-  locationName: GeocodingResponse;
+  locationName?: GeocodingResponse;
 }
 
 function CurrentWeather({ data, locationName }: CurrentWeatherProps) {

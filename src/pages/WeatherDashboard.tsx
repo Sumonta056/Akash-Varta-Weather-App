@@ -1,4 +1,5 @@
 import CurrentWeather from "@/components/CurrentWeather";
+import HourlyTemperature from "@/components/HourlyTemperature";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import WeatherLoadSkeleton from "@/components/WeatherLoadSkeleton";
@@ -108,13 +109,12 @@ function WeatherDashboard() {
       </div>
 
       <div className="grid gap-6">
-        <div>
+        <div className="flex flex-col gap-4 lg:flex-row">
           <CurrentWeather
             data={weatherQuery.data}
             locationName={locationName}
           />
-          {/* current weather */}
-          {/* hourly temperature */}
+          <HourlyTemperature data={forecastQuery.data} />
         </div>
         <div>
           {/* details  */}
